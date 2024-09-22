@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ceiUIHGj0TbteKXE/ik9J/MeKR8U42r/ulkZa/ee09cd4O4zR8m8XVkC3BTmFzseCeKUxte2NivZ5RjARRCfxg==",
+  "dgSpecHash": "vfGAp7tOPJeZhL9NXCzp6OdAkmPeshUJM7t33yxPKQhF+WH/iDX7D2FyFAjcxLb4StUHXYi7Y4FEqB5lRv4Xvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Charity\\ProductCatalogSystem\\ProductService\\ProductService.csproj",
+  "projectFilePath": "C:\\Users\\Charity\\ProductCatalogSystem\\ProductService\\Catalog.ProductService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Charity\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Charity\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

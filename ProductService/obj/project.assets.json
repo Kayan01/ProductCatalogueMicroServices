@@ -3204,9 +3204,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Charity\\ProductCatalogSystem\\ProductService\\ProductService.csproj",
-      "projectName": "ProductService",
-      "projectPath": "C:\\Users\\Charity\\ProductCatalogSystem\\ProductService\\ProductService.csproj",
+      "projectUniqueName": "C:\\Users\\Charity\\ProductCatalogSystem\\ProductService\\Catalog.ProductService.csproj",
+      "projectName": "Catalog.ProductService",
+      "projectPath": "C:\\Users\\Charity\\ProductCatalogSystem\\ProductService\\Catalog.ProductService.csproj",
       "packagesPath": "C:\\Users\\Charity\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Charity\\ProductCatalogSystem\\ProductService\\obj\\",
       "projectStyle": "PackageReference",

@@ -3203,9 +3203,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Charity\\ProductCatalogSystem\\InventoryService\\InventoryService.csproj",
-      "projectName": "InventoryService",
-      "projectPath": "C:\\Users\\Charity\\ProductCatalogSystem\\InventoryService\\InventoryService.csproj",
+      "projectUniqueName": "C:\\Users\\Charity\\ProductCatalogSystem\\InventoryService\\Catalog.InventoryService.csproj",
+      "projectName": "Catalog.InventoryService",
+      "projectPath": "C:\\Users\\Charity\\ProductCatalogSystem\\InventoryService\\Catalog.InventoryService.csproj",
       "packagesPath": "C:\\Users\\Charity\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Charity\\ProductCatalogSystem\\InventoryService\\obj\\",
       "projectStyle": "PackageReference",

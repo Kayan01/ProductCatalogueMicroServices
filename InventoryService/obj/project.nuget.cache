@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NhWAS7HspWgbNmKT3+RpO9rGD0yNl0MSqU+lGSA9t51fPTfIoAopUnujoYIUJh2z3xdJZhvt3BRzs5Ac6UBLDw==",
+  "dgSpecHash": "yJzJQfn8FERXd3Xnsj4Lw5a005gPxdXx96r6b0Z+YnNHfBFj2ZCjpsUJM5OHHNHrX50ptBGEwr+R2Pn0BciFVw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Charity\\ProductCatalogSystem\\InventoryService\\InventoryService.csproj",
+  "projectFilePath": "C:\\Users\\Charity\\ProductCatalogSystem\\InventoryService\\Catalog.InventoryService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Charity\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Charity\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
