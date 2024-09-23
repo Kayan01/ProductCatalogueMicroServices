@@ -1,6 +1,12 @@
-﻿namespace InventoryService.Data
+﻿using InventoryService.Model;
+using Microsoft.EntityFrameworkCore;
+
+namespace InventoryService.Data
 {
-    public class InventoryDbContext
+    public class InventoryDbContext : DbContext
     {
+        public InventoryDbContext(DbContextOptions<InventoryDbContext> options) : base(options) { }
+
+        public DbSet<InventoryItem> InventoryItems { get; set; }
     }
 }
