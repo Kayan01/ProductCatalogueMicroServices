@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+  productdb:
+    image: postgres
+
+  authenticationdb:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+  pgadmin:
+    image: dpage/pgadmin4
+ 
+  catalog.productservice:
+    image: ${DOCKER_REGISTRY-}productservice
+    build:
+      context: .
+      dockerfile: ProdService/Dockerfile
+  apigateway:
+   
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
+  
+  caltalog.authenticationservice:
+    image: ${DOCKER_REGISTRY-}authenticationservice
+    build:
+      context: .
+      dockerfile: AuthenticationService/Dockerfile
+
+volumes:
+  postgres_data:
+  pgadmin_data:
+     

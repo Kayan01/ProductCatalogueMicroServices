@@ -13,8 +13,8 @@ builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>
     {
-        options.Authority = "http://localhost:5003"; // URL of the Authentication Service
-        options.Audience = "your_audience"; // Audience for your JWT tokens
+        options.Authority = "http://localhost:5003"; 
+        options.Audience = ""; 
         options.RequireHttpsMetadata = false;
     });
 
