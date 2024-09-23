@@ -16,14 +16,14 @@ namespace ProductService.Controller
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+        public async Task<ActionResult<IEnumerable<Product>>> GetAllAsync(int pageNumber, int pageSize)
         {
-            var products = await _productService.GetAllProductsAsync();
+          var products = await _productService.GetAllProductsAsync(pageNumber, pageSize);
             return Ok(products);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> GetProduct(int id)
+        public async Task<ActionResult<ProductDTO>> GetProduct(int id)
         {
             var product = await _productService.GetProductByIdAsync(id);
             if (product == null)
@@ -34,7 +34,7 @@ namespace ProductService.Controller
         }
 
         [HttpPost]
-        public async Task<ActionResult<Product>> CreateProduct(Product product)
+        public async Task<ActionResult<ProductDTO>> CreateProduct(Product product)
         {
             var createdProduct = await _productService.CreateProductAsync(product);
             return CreatedAtAction(nameof(GetProduct), new { id = createdProduct.Id }, createdProduct);
