@@ -16,9 +16,9 @@ namespace ProductService.Service
             _productRepository = productRepository;
         }
 
-        public async Task<IEnumerable<Product>> GetAllProductsAsync()
+        public async Task<IEnumerable<Product>> GetAllProductsAsync(int pageNumber, int pageSize)
         {
-            return await _productRepository.GetAllAsync();
+            return await _productRepository.GetAllAsync(pageNumber, pageSize);
         }
 
         public async Task<Product> GetProductByIdAsync(int id)
@@ -26,12 +26,12 @@ namespace ProductService.Service
             return await _productRepository.GetByIdAsync(id);
         }
 
-        public async Task<Product> CreateProductAsync(Product product)
+        public async Task<Product> CreateProductAsync(ProductDTO product)
         {
             return await _productRepository.AddAsync(product);
         }
 
-        public async Task UpdateProductAsync(Product product)
+        public async Task UpdateProductAsync(ProductDTO product)
         {
             await _productRepository.UpdateAsync(product);
         }

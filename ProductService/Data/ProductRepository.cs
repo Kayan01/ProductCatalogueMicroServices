@@ -13,9 +13,12 @@ namespace ProductService.Data
             _context = context;
         }
 
-        public async Task<IEnumerable<Product>> GetAllAsync()
+        public async Task<IEnumerable<Product>> GetAllAsync(int pageNumber, int pageSize)
         {
-            return await _context.Products.ToListAsync();
+            return await _context.Products
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
         }
 
         public async Task<Product> GetByIdAsync(int id)
@@ -23,14 +26,14 @@ namespace ProductService.Data
             return await _context.Products.FindAsync(id);
         }
 
-        public async Task<Product> AddAsync(Product product)
+        public async Task<Product> AddAsync(ProductDTO product)
         {
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
             return product;
         }
 
-        public async Task UpdateAsync(Product product)
+        public async Task UpdateAsync(ProductDTO product)
         {
             _context.Entry(product).State = EntityState.Modified;
             await _context.SaveChangesAsync();
