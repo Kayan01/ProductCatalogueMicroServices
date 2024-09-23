@@ -3,21 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductService", "ProductService\ProductService.csproj", "{84F1F0A9-3300-489F-9FD5-D61C557B0323}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.ProductService", "ProductService\Catalog.ProductService.csproj", "{84F1F0A9-3300-489F-9FD5-D61C557B0323}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationService", "AuthenticationService\AuthenticationService.csproj", "{725F6759-C775-43BB-A35C-1C53B49CB7D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationService", "AuthenticationService\AuthenticationService.csproj", "{725F6759-C775-43BB-A35C-1C53B49CB7D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryService", "InventoryService\InventoryService.csproj", "{791211F9-BC66-4CD2-B9B0-EDEBC84815C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.InventoryService", "InventoryService\Catalog.InventoryService.csproj", "{791211F9-BC66-4CD2-B9B0-EDEBC84815C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{F9E184DA-144C-4D29-B9F9-A6D3971B4A42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{F9E184DA-144C-4D29-B9F9-A6D3971B4A42}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{608F8203-DD21-4076-BFFE-B39495E042B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{84F1F0A9-3300-489F-9FD5-D61C557B0323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -36,5 +35,15 @@ Global
 		{F9E184DA-144C-4D29-B9F9-A6D3971B4A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9E184DA-144C-4D29-B9F9-A6D3971B4A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9E184DA-144C-4D29-B9F9-A6D3971B4A42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{608F8203-DD21-4076-BFFE-B39495E042B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{608F8203-DD21-4076-BFFE-B39495E042B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{608F8203-DD21-4076-BFFE-B39495E042B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{608F8203-DD21-4076-BFFE-B39495E042B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0152AAFB-701A-4B32-A30C-04F4606EE732}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,72 @@
+version: '3.4'
+
+services:
+  
+   productdb:
+    container_name: productdb
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin1234
+      - POSTGRES_DB=DiscountDb
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+   pgadmin:
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@aspnetrun.com
+      - PGADMIN_DEFAULT_PASSWORD=admin1234
+    restart: always
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/root/.pgadmin
+   
+   authenticationdb:
+    container_name: authenticationdb
+    restart: always
+    ports:
+     - "1433:1433"
+    environment:
+     - SA_PASSWORD=SwN12345678
+     - ACCEPT_EULA=Y  
+ 
+   calaog.productservice:
+    container_name: productservice
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionString=Server=productdb;Port=5432;Database=DiscountDb;User Id=admin;Password=admin1234;
+    depends_on:
+      - productdb
+    ports:
+      - "8002:80"
+
+   catalog.authenticationservice:
+    container_name: authenticationservice
+    environment:
+      - ConnectionString=Server=authenticationdb;Database=AuthDB;User Id=sa;Password=SwN12345678
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    depends_on:
+     - authenticationdb
+    ports:
+     - "8004:80"
+
+   apigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+    ports:
+      - "8080"
+      - "8081"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+
+
+
+
+
